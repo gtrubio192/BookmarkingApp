@@ -1,0 +1,59 @@
+.listing {
+  position: initial; }
+.listing-app {
+  text-align: center; }
+.listing-title {
+  font-size: 20px;
+  line-height: 1; }
+.listing-box {
+  background: white;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border: 1px solid lightslategray;
+  box-shadow: 5px 6px 5px -1px #a39ea3;
+  transition: all 1s;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+  word-wrap: break-word;
+  height: 100px;
+  position: relative;
+  text-align: left; }
+  .listing-box:hover {
+    box-shadow: 5px 6px 5px 3px #615d61; }
+    .listing-box:hover .listing-control {
+      visibility: visible;
+      opacity: 1; }
+  .listing-box .listing-url {
+    position: absolute;
+    bottom: 15px;
+    left: 30px; }
+    .listing-box .listing-url p {
+      font-size: 16px;
+      margin: 0;
+      color: gray; }
+  @media (min-width: 768px) {
+    .listing-box {
+      margin: 15px;
+      width: 46%; }
+      .listing-box:nth-child(even) {
+        float: right; }
+      .listing-box:nth-child(odd) {
+        margin-left: 0; } }
+.listing-control {
+  transition: all 1s;
+  visibility: hidden;
+  opacity: 0;
+  float: right;
+  padding: 0 5px; }
+.listing-form {
+  margin-bottom: 20px; }
+
+.header-title {
+  display: inline-block;
+  font-size: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px; }
+
+/*# sourceMappingURL=output.css.map */

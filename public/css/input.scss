@@ -1,0 +1,74 @@
+.listing {
+    & {
+        position: initial;
+    }
+    &-app {
+        text-align: center;
+    }
+    &-title {
+        font-size: 20px;
+        line-height: 1;
+    }
+    &-box {
+        background: white;
+        border-radius: 6px;
+        border-top-left-radius: 0;
+        border: 1px solid lightslategray;
+        box-shadow: 5px 6px 5px -1px rgba(163,158,163,1);
+        transition: all 1s;
+        margin-bottom: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        overflow: hidden;
+        word-wrap: break-word;
+        height: 100px;
+        position: relative;
+        text-align: left;
+
+        &:hover {
+            box-shadow: 5px 6px 5px 3px rgba(97,93,97,1);
+            .listing-control {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        & .listing-url {
+            p {
+                font-size: 16px;
+                margin: 0;
+                color: gray;
+            }
+            position: absolute;
+            bottom: 15px;
+            left: 30px;
+        }
+        @media (min-width: 768px) {
+            margin: 15px;
+            width: 46%;
+            &:nth-child(even) {
+                float: right;
+            }
+            &:nth-child(odd) {
+                margin-left: 0;
+            }
+        }
+    }
+    &-control {
+        transition: all 1s;
+        visibility: hidden;
+        opacity: 0;
+        float: right;
+        padding: 0 5px;
+    }
+    &-form {
+        margin-bottom: 20px;
+    }
+
+}
+
+.header-title {
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
