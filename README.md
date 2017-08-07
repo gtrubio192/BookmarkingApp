@@ -1,6 +1,6 @@
 
 # React Bookmark App
-
+Store and manage your favorite webpages on one easy to use app. 
 
 ## To use
 
