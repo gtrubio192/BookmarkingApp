@@ -1,3 +1,4 @@
+
 var ListItem = React.createClass({
   rawMarkup: function() {
     var md = new Remarkable();
@@ -24,7 +25,7 @@ var BookmarkApp = React.createClass({
       dataType: 'json',
       type: 'GET',
       cache: true,
-      headers: { 'Authorization': 'fizzy_pop'},
+      headers: { 'Authorization': this.props.apiKey},
       success: function(response) {       
         this.setState({data: response.data});
       }.bind(this),
@@ -49,7 +50,7 @@ var BookmarkApp = React.createClass({
       dataType: 'json',
       type: 'POST',
       data: postData,
-      headers: { 'Authorization': 'fizzy_pop'},
+      headers: { 'Authorization': this.props.apiKey},
       success: function(data) {
         var bookmarks = this.state.data;
         var newBookmarks = bookmarks.concat([listItem]);
@@ -67,7 +68,7 @@ var BookmarkApp = React.createClass({
       url: `${this.props.url}/${data}`,  
       dataType: 'json',
       type: 'DELETE',
-      headers: { 'Authorization': 'fizzy_pop'},
+      headers: { 'Authorization': this.props.apiKey},
       success: function() {
       }.bind(this),
       error: function(xhr, status, err) {
@@ -180,6 +181,6 @@ var ListForm = React.createClass({
 });
 
 ReactDOM.render(
-  <BookmarkApp url="http://clientside-api.herokuapp.com/api/v1/listings" pollInterval={10000} />,
+  <BookmarkApp url="http://clientside-api.herokuapp.com/api/v1/listings" apiKey='fizzy_pop' pollInterval={10000} />,
   document.getElementById('content')
 );
