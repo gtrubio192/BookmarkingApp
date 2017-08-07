@@ -1,9 +1,5 @@
 {
-  "name": "React Tutorial Server",
-  "description": "Code from the React tutorial",
-  "keywords": [ "react", "reactjs", "tutorial" ],
-  "repository": "https://github.com/reactjs/react-tutorial",
-  "logo": "https://facebook.github.io/react/img/logo.svg",
+  "name": "React Bookmarking App",
   "website": "http://facebook.github.io/react/docs/tutorial.html",
   "success_url": "/",
   "env" : {
